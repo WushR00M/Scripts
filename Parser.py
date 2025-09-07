@@ -39,14 +39,3 @@ def parse_osu_mania_chart(filename, key_count=4):
                     chart.append({"time": start_time, "lane": lane})
 
     return chart
-
-# Example usage
-if __name__ == "__main__":
-    input_file = "Chart.osu"
-    output_file = "chart.json"
-
-    notes = parse_osu_mania_chart(input_file, key_count=4)
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(notes, f, indent=2)
-
-    print(f"Exported {len(notes)} notes to {output_file}")
